@@ -1,0 +1,87 @@
+.book-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.book-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.book-card__img-wrap {
+  position: relative;
+  aspect-ratio: 2/3;
+  overflow: hidden;
+  background: var(--border-light);
+  display: block;
+}
+.book-card__img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+.book-card:hover .book-card__img { transform: scale(1.04); }
+
+.book-card__badge {
+  position: absolute; top: 0.6rem; left: 0.6rem;
+}
+
+.book-card__body {
+  padding: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1;
+}
+
+.book-card__category {
+  font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.6px;
+  color: var(--primary); font-weight: 700;
+}
+
+.book-card__title {
+  font-size: 0.95rem; font-weight: 700; color: var(--text);
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color var(--transition);
+}
+.book-card__title:hover { color: var(--primary); }
+
+.book-card__author {
+  font-size: 0.82rem; color: var(--text-muted);
+}
+
+.book-card__rating {
+  display: flex; align-items: center; gap: 0.3rem; margin-top: 0.15rem;
+}
+.book-card__review-count {
+  font-size: 0.76rem; color: var(--text-muted);
+}
+
+.book-card__price-row {
+  display: flex; align-items: baseline; gap: 0.5rem; margin-top: 0.2rem;
+}
+.book-card__price { font-size: 1.1rem; font-weight: 700; color: var(--text); }
+.book-card__original-price {
+  font-size: 0.85rem; color: var(--text-muted); text-decoration: line-through;
+}
+
+.book-card__add-btn {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  width: 100%;
+  justify-content: center;
+}
+.book-card__add-btn.in-cart {
+  background: var(--success);
+}
+.book-card__add-btn.in-cart:hover {
+  background: #1b5e20;
+}
