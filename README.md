@@ -72,6 +72,3 @@ Built end-to-end using **IBM BOB**. The tool handled project scaffolding, iterat
 - Payment processing is simulated — no real transactions occur
 - All data is in `src/data/books.js` and can be replaced with a real API
 
-## License
-
-MIT
